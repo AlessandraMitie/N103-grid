@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+}
+
+#main{
+    display: grid;
+    grid-template-areas: 'header header header' /*1 linha com 4 colunas */
+                         'nav nav aside' /*2 linha com 4 colunas*/
+                         'section section aside'
+                         /*'section . aside' */
+                         /* o ponto deixa o espaço em branco */
+                         'footer footer footer';
+                         /* pode/deve definir tudo em uma linha só */
+    grid-auto-rows: 5vw 15vw 20vw 10vw;
+            /*1ªlinha 2ªlinha 3ªlinha 4ªlinha */
+    /* grid-gap: 10px; dá espaço entre os elementos */
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a:nth-child(4){
+    font-size:16pt;
+    color: purple;
+}
+
+header a:hover{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+header a{
+    color: red;
+    font-size: 14pt;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    grid-area: nav;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h1{
+    color: green;
+    font-size: 3vmax; /*viewmax é 20% do tamanho da tela e nao do tamanho da div*/
+}
+
+aside{
+    grid-area: aside;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+aside p{
+    width: 150px;
+    color: white;
+    font-size: 10pt;
+}
+
+aside h2{
+    width: 150px;
+    color: white;
+    font-size: 20pt;
+}
+
+section{
+    grid-area: section;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section img{
+    width: 250px;
+    height: 250px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer img{
+    width: 40px;
+    height: auto;
+}
